@@ -31,7 +31,7 @@ object HandleCss extends CssClass(
     S.left.px(0),
     S.borderRadius.px(18),
     S.backgroundColor(Palette.background),
-    S.boxShadow("0 1px 4px 1px rgba(0, 0, 0, 0.6)"),
+    S.boxShadow("0 1px 2px 0px rgba(0, 0, 0, 0.6)"),
     S.transition("left 0.2s")
 )
 
