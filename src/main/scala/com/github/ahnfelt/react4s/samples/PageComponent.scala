@@ -6,6 +6,7 @@ import com.github.ahnfelt.react4s.samples.spotify.SpotifyComponent
 import com.github.ahnfelt.react4s.samples.theme._
 import com.github.ahnfelt.react4s.samples.timer.TimerComponent
 import com.github.ahnfelt.react4s.samples.todolist.TodoListComponent
+import com.github.ahnfelt.react4s.samples.toggle.ToggleButtonComponent
 import com.github.ahnfelt.react4s.samples.treeeditor.{TreeNode, TreeNodeComponent, TreeRootComponent}
 import com.github.ahnfelt.react4s.samples.websockets.WebSocketsComponent
 
@@ -20,6 +21,7 @@ case class PageComponent(page : P[Page]) extends Component[NoEmit] {
             case ExamplesPage(_) => renderMainPage()
             case TodoListPage(_) => renderTodoListPage()
             case TreeEditorPage(_) => renderTreeEditorPage()
+            case TogglePage(_) => renderTogglePage(get)
             case CssClassPage(_) => renderCssClassPage()
             case SpotifyPage(_) => renderSpotifyPage()
             case TimerPage(_) => renderTimerPage()
@@ -293,6 +295,35 @@ case object Delete extends TreeEvent
                         )),
                     )),
                 ))
+            )
+        )
+    }
+
+    val toggleState = State(false)
+    def renderTogglePage(get : Get) = {
+        E.div(
+            ContentColumnCss,
+            E.div(
+                CodeColumnCss,
+                Text("This example shows a how to write a simple reusable component."),
+                Component(CodeLoaderComponent, "toggle/ToggleButtonComponent.scala", None, true),
+                E.div(SpacerCss),
+                Text("It can be used from another component like this:"),
+                Component(CodeComponent, """
+val toggled = State(false)
+
+def render(get : Get) = {
+    Component(ToggleButtonComponent, get(toggled)).withHandler(toggled.set)
+}
+                """, true),
+                E.div(SpacerCss),
+                E.div(SpacerCss),
+                sourceLink("toggle"),
+            ),
+            E.div(
+                ResultColumnCss,
+                E.span(Text("Enable"), S.paddingRight.px(15)),
+                Component(ToggleButtonComponent, get(toggleState)).withHandler(toggleState.set)
             )
         )
     }

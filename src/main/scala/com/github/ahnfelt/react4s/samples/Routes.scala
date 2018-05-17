@@ -13,6 +13,7 @@ object Routes {
         path("examples", ExamplesPage,
             path("todo-list", TodoListPage),
             path("tree-editor", TreeEditorPage),
+            path("toggle-button", TogglePage),
             path("css-class", CssClassPage),
             path("spotify-search", SpotifyPage),
             path("timer", TimerPage),
