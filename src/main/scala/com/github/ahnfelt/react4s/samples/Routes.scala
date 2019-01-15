@@ -17,6 +17,7 @@ object Routes {
             path("css-class", CssClassPage),
             path("spotify-search", SpotifyPage),
             path("timer", TimerPage),
+            path("contexts", ContextPage),
             path("portals", PortalPage),
             path("websockets", WebSocketsPage),
             path("react-js", ReactJsPage)

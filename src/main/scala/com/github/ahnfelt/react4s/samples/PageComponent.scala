@@ -1,6 +1,7 @@
 package com.github.ahnfelt.react4s.samples
 
 import com.github.ahnfelt.react4s._
+import com.github.ahnfelt.react4s.samples.context.ThemeOuterComponent
 import com.github.ahnfelt.react4s.samples.portal.PortalComponent
 import com.github.ahnfelt.react4s.samples.spotify.SpotifyComponent
 import com.github.ahnfelt.react4s.samples.theme._
@@ -25,6 +26,7 @@ case class PageComponent(page : P[Page]) extends Component[NoEmit] {
             case CssClassPage(_) => renderCssClassPage()
             case SpotifyPage(_) => renderSpotifyPage()
             case TimerPage(_) => renderTimerPage()
+            case ContextPage(_) => renderContextPage()
             case PortalPage(_) => renderPortalPage()
             case WebSocketsPage(_) => renderWebSocketsPage()
             case ReactJsPage(_) => renderReactJsPage()
@@ -196,6 +198,27 @@ case class MainComponent() extends Component[NoEmit] {
             E.div(
                 ResultColumnCss,
                 Component(TimerComponent)
+            )
+        )
+    }
+
+    def renderContextPage() = {
+        E.div(
+            ContentColumnCss,
+            E.div(
+                CodeColumnCss,
+                Text("This example shows how to use React Contexts to pass values through to distant descendants."),
+                Component(CodeLoaderComponent, "context/ThemeContext.scala", None, true),
+                E.div(SpacerCss),
+                Component(CodeLoaderComponent, "context/ThemeOuterComponent.scala", None, true),
+                E.div(SpacerCss),
+                Component(CodeLoaderComponent, "context/ThemeInnerComponent.scala", None, true),
+                E.div(SpacerCss),
+                sourceLink("context"),
+            ),
+            E.div(
+                ResultColumnCss,
+                Component(ThemeOuterComponent)
             )
         )
     }
