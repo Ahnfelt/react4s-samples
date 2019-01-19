@@ -252,7 +252,10 @@ case class MainComponent() extends Component[NoEmit] {
             ),
             E.div(
                 ResultColumnCss,
-                Component(TodoListComponent)
+                Component(TodoListComponent),
+                E.div(SpacerCss),
+                E.h3(Text("Looking for TodoMVC?")),
+                E.a(LinkCss, A.href("http://www.react4s.org/todomvc/"), Text("Full TodoMVC in 139 lines"))
             )
         )
     }
