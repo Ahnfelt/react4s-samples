@@ -45,6 +45,16 @@ case class UppercaseComponent() extends Component[NoEmit] {
                 Text("It's still concise though - check out the examples and compare them to similar libraries, for Scala or otherwise. "),
             ),
             E.h1(HeadingCss,
+                Text("TodoMVC in 139 lines")
+            ),
+            E.p(
+                Text("Including persistence and routing. "),
+                E.a(LinkCss, A.href("http://www.react4s.org/todomvc/"), Text("Live version")),
+                Text(" and "),
+                E.a(LinkCss, A.href("https://github.com/Ahnfelt/react4s-todomvc/blob/master/src/main/scala/com/github/ahnfelt/react4s/todomvc/TodoApp.scala"), Text("source code")),
+                Text("."),
+            ),
+            E.h1(HeadingCss,
                 Text("Performance by default")
             ),
             E.p(
