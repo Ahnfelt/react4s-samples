@@ -73,8 +73,8 @@ case class MainComponent() extends Component[NoEmit] {
                     S.border.px(0),
                     S.height.px(20),
                     S.marginLeft.px(10),
-                    A.src("https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png"),
-                    A.alt("Fork me on GitHub"),
+                    A.src("https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png"),
+                    A.alt("GitHub"),
                 )
             ),
         )
