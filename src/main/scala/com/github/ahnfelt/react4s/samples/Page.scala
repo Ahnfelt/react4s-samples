@@ -14,5 +14,6 @@ case class SpotifyPage(parent : ExamplesPage = ExamplesPage()) extends Page
 case class ContextPage(parent : ExamplesPage = ExamplesPage()) extends Page
 case class PortalPage(parent : ExamplesPage = ExamplesPage()) extends Page
 case class TimerPage(parent : ExamplesPage = ExamplesPage()) extends Page
+case class SvgPage(parent : ExamplesPage = ExamplesPage()) extends Page
 case class WebSocketsPage(parent : ExamplesPage = ExamplesPage()) extends Page
 case class ReactJsPage(parent : ExamplesPage = ExamplesPage()) extends Page

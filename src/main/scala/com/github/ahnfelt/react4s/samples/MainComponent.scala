@@ -54,6 +54,7 @@ case class MainComponent() extends Component[NoEmit] {
                         E.div(MenuEntryCss, E.a(Text("Timer"), LinkCss, A.href(href(TimerPage())))),
                         E.div(MenuEntryCss, E.a(Text("Contexts"), LinkCss, A.href(href(ContextPage())))),
                         E.div(MenuEntryCss, E.a(Text("Portals"), LinkCss, A.href(href(PortalPage())))),
+                        E.div(MenuEntryCss, E.a(Text("SVG"), LinkCss, A.href(href(SvgPage())))),
                         E.div(MenuEntryCss, E.a(Text("WebSockets"), LinkCss, A.href(href(WebSocketsPage())))),
                         E.div(MenuEntryCss, E.a(Text("React.js interop"), LinkCss, A.href(href(ReactJsPage())))),
                     ),

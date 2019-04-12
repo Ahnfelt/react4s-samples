@@ -19,6 +19,7 @@ object Routes {
             path("timer", TimerPage),
             path("contexts", ContextPage),
             path("portals", PortalPage),
+            path("svg", SvgPage),
             path("websockets", WebSocketsPage),
             path("react-js", ReactJsPage)
         )

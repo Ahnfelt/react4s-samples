@@ -4,6 +4,7 @@ import com.github.ahnfelt.react4s._
 import com.github.ahnfelt.react4s.samples.context.ThemeOuterComponent
 import com.github.ahnfelt.react4s.samples.portal.PortalComponent
 import com.github.ahnfelt.react4s.samples.spotify.SpotifyComponent
+import com.github.ahnfelt.react4s.samples.svg.SvgComponent
 import com.github.ahnfelt.react4s.samples.theme._
 import com.github.ahnfelt.react4s.samples.timer.TimerComponent
 import com.github.ahnfelt.react4s.samples.todolist.TodoListComponent
@@ -28,6 +29,7 @@ case class PageComponent(page : P[Page]) extends Component[NoEmit] {
             case TimerPage(_) => renderTimerPage()
             case ContextPage(_) => renderContextPage()
             case PortalPage(_) => renderPortalPage()
+            case SvgPage(_) => renderSvgPage()
             case WebSocketsPage(_) => renderWebSocketsPage()
             case ReactJsPage(_) => renderReactJsPage()
         }
@@ -198,6 +200,23 @@ case class MainComponent() extends Component[NoEmit] {
             E.div(
                 ResultColumnCss,
                 Component(TimerComponent)
+            )
+        )
+    }
+
+    def renderSvgPage() = {
+        E.div(
+            ContentColumnCss,
+            E.div(
+                CodeColumnCss,
+                Text("This example shows how to use SVG."),
+                Component(CodeLoaderComponent, "svg/SvgComponent.scala", None, true),
+                E.div(SpacerCss),
+                sourceLink("svg"),
+            ),
+            E.div(
+                ResultColumnCss,
+                Component(SvgComponent)
             )
         )
     }
