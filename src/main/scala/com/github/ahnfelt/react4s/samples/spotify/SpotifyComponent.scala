@@ -33,7 +33,7 @@ case class SpotifyComponent() extends Component[NoEmit] {
                 case Error(_) => Text(" error! ")
                 case Result(artists) =>
                     E.div(S.paddingTop.px(10), Tags(
-                        for(artist <- artists) yield renderArtist(artist)
+                        for(artist <- artists.toList) yield renderArtist(artist)
                     ))
             }
         )

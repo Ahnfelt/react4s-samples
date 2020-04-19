@@ -16,7 +16,7 @@ case class WebSocketsComponent() extends Component[NoEmit] {
             socket.onopen = { e => log.modify(_ :+ "Connected.") }
             socket.onclose = { e => log.modify(_ :+ "Closed: " + e.reason) }
             socket.onmessage = { e => log.modify(_ :+ ("Received: " + e.data)) }
-            socket.onerror = { e => log.modify(_ :+ "Error: " + e.message) }
+            socket.onerror = { e => log.modify(_ :+ "Error: " + e) }
             webSocket.set(Some(socket))
         }
     }

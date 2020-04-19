@@ -5,10 +5,10 @@ organization := "com.github.ahnfelt"
 version := "0.1-SNAPSHOT"
 
 resolvers += Resolver.sonatypeRepo("snapshots")
-libraryDependencies += "com.github.ahnfelt" %%% "react4s" % "0.9.24-SNAPSHOT"
-libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "0.9.2"
-libraryDependencies += "com.github.werk" %%% "router4s" % "0.1.0-SNAPSHOT"
+libraryDependencies += "com.github.ahnfelt" %%% "react4s" % "0.9.27-SNAPSHOT"
+libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "1.0.0"
+libraryDependencies += "com.github.werk" %%% "router4s" % "0.1.1-SNAPSHOT"
 
-scalaVersion := "2.12.4"
+scalaVersion := "2.13.0"
 
 scalaJSUseMainModuleInitializer := true

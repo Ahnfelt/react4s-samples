@@ -59,17 +59,17 @@ case class PageComponent(page : P[Page]) extends Component[NoEmit] {
                 E.div(SpacerCss),
                 Text("project/plugins.sbt"),
                 Component(CodeComponent, """
-addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.22")
+addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.28")
                 """, false),
                 E.div(SpacerCss),
                 Text("build.sbt"),
                 Component(CodeComponent, """
 enablePlugins(ScalaJSPlugin)
 scalaJSUseMainModuleInitializer := true
-scalaVersion := "2.12.4"
+scalaVersion := "2.13.0"
 
 resolvers += Resolver.sonatypeRepo("snapshots")
-libraryDependencies += "com.github.ahnfelt" %%% "react4s" % "0.9.24-SNAPSHOT"
+libraryDependencies += "com.github.ahnfelt" %%% "react4s" % "0.9.27-SNAPSHOT"
                 """, false),
                 E.div(SpacerCss),
                 Text("index.html"),
@@ -84,7 +84,7 @@ libraryDependencies += "com.github.ahnfelt" %%% "react4s" % "0.9.24-SNAPSHOT"
     </head>
     <body style="padding: 0; margin: 0">
         <div id="main"></div>
-        <script src="target/scala-2.12/example-fastopt.js"></script>
+        <script src="target/scala-2.13/example-fastopt.js"></script>
     </body>
 </html>
                 """, false),
