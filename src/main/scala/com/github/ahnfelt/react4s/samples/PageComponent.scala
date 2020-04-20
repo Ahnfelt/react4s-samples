@@ -59,7 +59,7 @@ case class PageComponent(page : P[Page]) extends Component[NoEmit] {
                 E.div(SpacerCss),
                 Text("project/plugins.sbt"),
                 Component(CodeComponent, """
-addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.28")
+addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.32")
                 """, false),
                 E.div(SpacerCss),
                 Text("build.sbt"),
