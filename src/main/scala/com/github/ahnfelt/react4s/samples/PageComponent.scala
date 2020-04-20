@@ -69,7 +69,7 @@ scalaJSUseMainModuleInitializer := true
 scalaVersion := "2.13.0"
 
 resolvers += Resolver.sonatypeRepo("snapshots")
-libraryDependencies += "com.github.ahnfelt" %%% "react4s" % "0.9.27-SNAPSHOT"
+libraryDependencies += "com.github.ahnfelt" %%% "react4s" % "0.9.29-SNAPSHOT"
                 """, false),
                 E.div(SpacerCss),
                 Text("index.html"),
